@@ -35,3 +35,11 @@ Bootstrap,
 Angular material 
 Angular cdk
 
+## step to follow
+Enter your username then Enter
+<img width="1409" alt="image" src="https://user-images.githubusercontent.com/6367865/187075604-a46f2174-9330-490a-859e-75f57d9a4030.png">
+
+<img width="1427" alt="image" src="https://user-images.githubusercontent.com/6367865/187075629-2e766d10-15c5-4cbe-b451-7b6e6155f7f4.png">
+
+
+
