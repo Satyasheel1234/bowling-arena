@@ -1,0 +1,12 @@
+<div class="login-container">
+    <div class="input-container">
+        <div class="input">
+            <form [formGroup]="loginFormGroup" style="">
+                <h1>Enter Your Name</h1>
+                <input class="input-field" style="padding-left:40px;" type="text" autocomplete="off"
+                    formControlName="fullName" id="fullName" class="form-control" placeholder="Please Enter your name" autofocus="">
+            </form>
+        </div>
+        <button class="btn btn-primary start_btn" (click)="start()">START</button>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 106, 133, 0.774);
+  background-image: url("/assets/bowling.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.input-container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  border: solid black 1px;
+  color: white;
+  box-shadow: inset 0 0 5px black;
+  background: rgba(50, 50, 50, 0.9);
+}
+.header {
+  margin-left: 15px;
+  font-family: cursive;
+}
+.highlight {
+  border: 2px solid #ff0000;
+  opacity: 1;
+}
+table {
+  background-color: rgba(255, 255, 255, 0.863);
+  margin-top: 15px;
+  box-shadow: inset 0 0 5px black;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 85%;
+  position: relative;
+  left: 7.5%;
+}
+
+th {
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 0 5px black;
+  text-align: center;
+  padding: 8px;
+}
+td {
+  border: 1px solid #dddddd;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.frame {
+  height: 100%;
+  width: 100%;
+}
+
+.first-hit {
+  width: 50%;
+  height: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  /* border: 1px solid black; */
+  text-align: center;
+  /* box-shadow: inset 0 0 5px black; */
+}
+
+.second-hit {
+  width: 50%;
+  height: 50px;
+  position: relative;
+  top: calc(-50px);
+  left: calc(50%);
+  border: 1px solid black;
+  text-align: center;
+  /* box-shadow: inset 0 0 5px black; */
+}
+
+.frame-total {
+  height: 50px;
+  position: relative;
+  top: calc(-50px);
+  left: 0;
+  border: 1px solid black;
+  text-align: center;
+  box-shadow: inset 0 0 5px black;
+}
+
+.number {
+  width: 10px;
+  height: 10px;
+
+  position: relative;
+  top: calc(50% - 10px);
+}
+
+.total-scroe {
+  position: relative;
+  left: calc(50% - 150px);
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgb(75, 2, 2);
+  border: 1px solid rgb(77, 3, 3);
+  opacity: 0.9;
+}
+.total-scroe-header {
+  font-family: cursive;
+}
+
+.btn-reset {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  left: calc(50% - 75px);
+  margin-top: 50px;
+}
+

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="input-container">
+    <h1 class="header">WELCOME: {{ userName || "Anonymous" }} 🎳</h1>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let item of board.frames">{{ item.frame_number }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td *ngFor="let item of board.frames; let i = index" style="   width: 10%;">
+          <form class="example-form" [ngClass]="{ highlight: currentFrame == i }">
+            <div class="first-hit">
+              <mat-label>___</mat-label>
+              <mat-select
+                (selectionChange)="onHitChange(i, 'first_hit', $event.value)"
+                [disabled]="currentFrame != i"
+                *ngIf="!item.isStrike()"
+              >
+                <mat-option [value]="0"> 0 </mat-option>
+                <mat-option *ngFor="let a of totalPins(); let i = index" [value]="i + 1"> {{ i + 1 }} </mat-option>
+              </mat-select>
+            </div>
+            <div class="second-hit">
+              <mat-label>___</mat-label>
+              <mat-select
+                (selectionChange)="onHitChange(i, 'second_hit', $event.value)"
+                [disabled]="item.first_hit < 0 || currentFrame != i"
+                *ngIf="!item.isSpare() && !item.isStrike()"
+              >
+                <mat-option [value]="0"> 0 </mat-option>
+                <mat-option *ngFor="let a of totalPins(); let i = index" [value]="i + 1" [disabled]="i >= item.maxPoints">
+                  {{ i + 1 }}
+                </mat-option>
+              </mat-select>
+              <div *ngIf="item.isStrike()">X</div>
+              <div *ngIf="item.isSpare()">/</div>
+            </div>
+            <div class="frame-total">
+              <span class="number"> {{ getTotalScore(i, item) }} </span>
+            </div>
+          </form>
+        </td>
+      </tbody>
+    </table>
+    <div class="total-scroe" style="">
+      <h1 class="total-scroe-header">TOTAL SCORE: {{ board.totalScore }}</h1>
+    </div>
+    <button class="btn btn-danger btn-reset" (click)="resetBoard()">RESET</button>
+  </div>
+</div>
